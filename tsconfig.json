@@ -1,12 +1,54 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "baseUrl": ".",
+    "paths": {
+      "@components": [
+        "./src/components/index.ts"
+      ],
+      "@primitives": [
+        "./src/components/ui/primitives/index.ts"
+      ],
+      "@components/": [
+        "./src/components/*"
+      ],
+      "@modal": [
+        "./src/components/common/store/modal-store.tsx"
+      ],
+      "@config/*": [
+        "./src/config/*"
+      ],
+      "@content/*": [
+        "./content/*"
+      ],
+      "@layouts/*": [
+        "./src/layouts/*"
+      ],
+      "@hooks/*": [
+        "./src/hooks/*"
+      ],
+      "@utils/*": [
+        "./src/utils/*"
+      ],
+      "@theme": [
+        "./src/theme/index.ts"
+      ],
+      "@lib/*": [
+        "./src/lib/*"
+      ],
+      "@data/*": ["data/*"]
+    },
+    "target": "esnext",
+    "lib": ["dom", "es2015", "ESNext.String"],
+    "allowSyntheticDefaultImports": true,
     "allowJs": true,
+    "types": [
+      "node"
+    ],
     "skipLibCheck": true,
-    "strict": true,
+    "strict": false,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
+    "experimentalDecorators": true,
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "node",
@@ -15,6 +57,12 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.js",
+    "**/*.jsx",
+    "next-env.d.ts"
+  ],
   "exclude": ["node_modules"]
 }
