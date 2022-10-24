@@ -5,6 +5,8 @@ import PackageIcon from '@geist-ui/icons/package'
 import FeatherIcon from '@geist-ui/icons/feather'
 import GitHubIcon from '@geist-ui/icons/github'
 import { HomeCell } from '@components'
+import Image from 'next/image'
+import nectarHero from 'public/content/nectar-hero.svg'
 
 const Application: NextPage<{}> = () => {
   const theme = useTheme()
@@ -13,10 +15,12 @@ const Application: NextPage<{}> = () => {
     <>
       <div className="layout">
         <div className="hero">
+          <Image style={{ filter: 'invert(1)'}} src={nectarHero} className='hero-image' />
           <h1 className="title">Nectar</h1>
           <h3 className="desc">
             An open source design system cloned from Geist with Stitches CSS injected.
           </h3>
+          
         </div>
 
         <Grid.Container gap={2} justify="center">
